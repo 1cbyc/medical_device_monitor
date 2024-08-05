@@ -1,5 +1,7 @@
-from flask import render_template, redirect, url_for
+# from flask import render_template, redirect, url_for
+from flask import render_template
 import pandas as pd
+from .data_analysis import detect_faults # will import fault detection
 from .alert_system import send_email_alert
 import os
 # from app import create_app
