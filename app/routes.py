@@ -5,6 +5,7 @@ from .data_analysis import detect_faults # will import fault detection
 from .alert_system import send_email_alert
 import plotly.express as px
 import os
+import psycopg2
 # from app import create_app
 
 # app = create_app()
@@ -62,3 +63,4 @@ def status():
     fig = px.scatter(df, x='timestamp', y='status', color='device_id', title='Device Status Over Time')
     graph_html = fig.to_html(full_html=False)
     return render_template('status.html', graph_html=graph_html)
+
