@@ -55,3 +55,10 @@ def alerts():
 
     fault_devices = df[df['status'] == 'FAULT']['device_id'].unique()
     return render_template('alerts.html', fault_devices=fault_devices)
+
+@app.route('/status')
+def status():
+    df = pd.read_csv('data/real_time_data.csv')
+    fig = px.scatter(df, x='timestamp', y='status', color='device_id', title='Device Status Over Time')
+    graph_html = fig.to_html(full_html=False)
+    return render_template('status.html', graph_html=graph_html)
