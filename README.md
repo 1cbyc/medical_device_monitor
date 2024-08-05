@@ -1,14 +1,8 @@
-[//]: # (medical_device_monitor)
-
-[//]: # (web system to monitor the status of medical devices and alert healthcare providers of any malfunctions. live @ medicmonitor.nsisong.com)
-
-[//]: # ()
-
 # The Nsisong Medical Device Monitoring and Alert System
 
 ## Overview
 
-Welcome to the Nsisong Medical Device Monitoring System. This guide will help you navigate the dashboard, understand alerts, and view historical data. The Nsisong Medical Device Monitoring and Alert System is designed to monitor the status of medical devices (e.g., heart monitors, infusion pumps) and alert healthcare providers of any malfunctions. It includes real-time data collection, analysis, and fault detection, with a user-friendly web interface for monitoring device status.
+Welcome to the Nsisong Medical Device Monitoring System. This guide will help you navigate the dashboard, understand alerts, and view historical data. The Nsisong Medical Device Monitoring and Alert System is designed to monitor the status of medical devices (e.g., heart monitors, infusion pumps) and alert healthcare providers of any malfunctions. It includes real-time data collection, analysis, and fault detection, with a user-friendly web interface for monitoring device status. web system to monitor the status of medical devices and alert healthcare providers of any malfunctions. live @ medicmonitor.nsisong.com)
 
 
 ## Dashboard Navigation
@@ -92,9 +86,7 @@ medical_device_monitor/
 
 - **`run.py`**: Entry point for running the Flask application.
 
-
 ## Code Structure
-
 
 - `app/`: Contains the Flask application and templates.
 - `data/`: Data files and simulated data.
@@ -103,13 +95,11 @@ medical_device_monitor/
 - `data/`: 
 - `alert_system/`: 
 
-
 ## Contributing
 
 - Fork the repository.
 - Create a feature branch.
 - Submit a pull request with a detailed description of changes.
-
 
 This `README.md` should give users and developers clear guidance on setting up, using, and contributing to the Medical Device Monitoring and Alert System. If you need further adjustments, just let me know!
 
