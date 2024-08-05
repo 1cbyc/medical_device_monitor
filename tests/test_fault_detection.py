@@ -25,6 +25,5 @@ class TestFaultDetection(unittest.TestCase):
     def tearDown(self):
         os.remove('data/test_data.csv')
 
-
 if __name__ == "__main__":
     unittest.main()
