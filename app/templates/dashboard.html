@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+<h1>Device Dashboard</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Device ID</th>
+            <th>Status</th>
+            <th>Heart Rate</th>
+            <th>Infusion Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for device in devices %}
+        <tr>
+            <td>{{ device.device_id }}</td>
+            <td>{{ device.status }}</td>
+            <td>{{ device.heart_rate }}</td>
+            <td>{{ device.infusion_rate }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
