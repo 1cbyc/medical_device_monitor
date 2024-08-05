@@ -1,6 +1,8 @@
-from flask import render_template
-from app import create_app
+from flask import render_template, redirect, url_for
 import pandas as pd
+from .alert_system import send_email_alert
+import os
+# from app import create_app
 
 app = create_app()
 
