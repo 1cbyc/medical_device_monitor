@@ -14,6 +14,15 @@ def dashboard():
     else:
         df = pd.DataFrame(columns=["device_id", "timestamp", "status", "heart_rate", "infusion_rate"])
 
+    # detect faults
+    fault_devices = df[df['status'] == 'FAULT']['device_id'].unique()
+
+    # send alerts
+    for device_id in fault_devices:
+        send_email_alert(device_id)
+
+    return render_template('dashboard.html', devices=df.to_dict('records'), fault_devices=fault_devices)
+
 @app.route('/')
 def dashboard():
     df = pd.read_csv('data/simulated_data.csv')
