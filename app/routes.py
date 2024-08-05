@@ -31,6 +31,10 @@ def dashboard():
 
 @app.route('/alerts')
 def alerts():
-    df = pd.read_csv('data/simulated_data.csv')
+    if os.path.exists('data/simulated_data.csv'):
+        df = pd.read_csv('data/simulated_data.csv')
+    else:
+        df = pd.DataFrame(columns=["device_id", "timestamp", "status", "heart_rate", "infusion_rate"])
+
     fault_devices = df[df['status'] == 'FAULT']['device_id'].unique()
     return render_template('alerts.html', fault_devices=fault_devices)
