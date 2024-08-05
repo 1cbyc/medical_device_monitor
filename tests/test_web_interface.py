@@ -1,7 +1,6 @@
 import unittest
 from app import app
 
-
 class TestWebInterface(unittest.TestCase):
 
     def setUp(self):
