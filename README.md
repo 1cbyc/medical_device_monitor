@@ -18,3 +18,10 @@ Welcome to the Nsisong Medical Device Monitoring System. This guide will help yo
 
 ## Historical Data
 - **Viewing Historical Data**: Navigate to the "Historical" tab to view past data trends.
+
+
+## Setup Instructions
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
