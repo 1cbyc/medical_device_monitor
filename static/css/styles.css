@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#graph-container {
+    margin: 20px;
+}
+
+@media (max-width: 600px) {
+    #graph-container {
+        margin: 10px;
+    }
+}
