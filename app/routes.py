@@ -3,10 +3,12 @@ from flask import render_template
 import pandas as pd
 from .data_analysis import detect_faults # will import fault detection
 from .alert_system import send_email_alert
+import plotly.express as px
 import os
 # from app import create_app
 
 # app = create_app()
+app = Flask(__name__)
 
 @app.route('/')
 def dashboard():
