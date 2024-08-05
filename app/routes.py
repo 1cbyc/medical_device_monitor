@@ -15,7 +15,7 @@ def dashboard():
     df = pd.read_csv('data/real_time_data.csv')
     fig = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Heart Rate Over Time')
     graph_html = fig.to_html(full_html=False)
-    return render_template('dashboard.html', graph_html=graph_html)
+    return render_template('dashboard-v1.html', graph_html=graph_html)
 @app.route('/')
 def dashboard():
     # will load the data
@@ -31,13 +31,13 @@ def dashboard():
     for device_id in fault_devices:
         send_email_alert(device_id)
 
-    return render_template('dashboard.html', devices=df.to_dict('records'), fault_devices=fault_devices)
+    return render_template('dashboard-v1.html', devices=df.to_dict('records'), fault_devices=fault_devices)
 
 # @app.route('/')
 # def dashboard():
 #     df = pd.read_csv('data/simulated_data.csv')
 #     fault_devices = df[df['status'] == 'FAULT']['device_id'].unique()
-#     return render_template('dashboard.html', devices=df.to_dict('records'), fault_devices=fault_devices)
+#     return render_template('dashboard-v1.html', devices=df.to_dict('records'), fault_devices=fault_devices)
 
 @app.route('/alerts')
 def alerts():
