@@ -4,7 +4,15 @@ from .alert_system import send_email_alert
 import os
 # from app import create_app
 
-app = create_app()
+# app = create_app()
+
+@app.route('/')
+def dashboard():
+    # will load the data
+    if os.path.exists('data/simulated_data.csv'):
+        df = pd.read_csv('data/simulated_data.csv')
+    else:
+        df = pd.DataFrame(columns=["device_id", "timestamp", "status"])
 
 @app.route('/')
 def dashboard():
