@@ -64,3 +64,11 @@ def status():
     graph_html = fig.to_html(full_html=False)
     return render_template('status.html', graph_html=graph_html)
 
+def connect_db():
+    conn: None = psycopg2.connect(
+        dbname='your_dbname',
+        user='your_user',
+        password='your_password',
+        host='your_host'
+    )
+    return conn
