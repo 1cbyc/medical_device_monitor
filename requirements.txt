@@ -4,3 +4,5 @@ numpy
 Flask
 scikit-learn
 plotly
+psycopg2-binary  # For PostgreSQL
+mysql-connector-python  # For MySQL
