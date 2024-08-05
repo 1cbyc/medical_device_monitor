@@ -4,10 +4,12 @@
 
 [//]: # ()
 
-# Nsisong Medical Device Monitoring System User Guide
+# The Nsisong Medical Device Monitoring and Alert System
 
-## Introduction
-Welcome to the Nsisong Medical Device Monitoring System. This guide will help you navigate the dashboard, understand alerts, and view historical data.
+## Overview
+
+Welcome to the Nsisong Medical Device Monitoring System. This guide will help you navigate the dashboard, understand alerts, and view historical data. The Nsisong Medical Device Monitoring and Alert System is designed to monitor the status of medical devices (e.g., heart monitors, infusion pumps) and alert healthcare providers of any malfunctions. It includes real-time data collection, analysis, and fault detection, with a user-friendly web interface for monitoring device status.
+
 
 ## Dashboard Navigation
 - **Real-Time Data**: View real-time graphs of device metrics.
@@ -19,18 +21,11 @@ Welcome to the Nsisong Medical Device Monitoring System. This guide will help yo
 ## Historical Data
 - **Viewing Historical Data**: Navigate to the "Historical" tab to view past data trends.
 
-
 ## Setup Instructions
 1. Clone the repository.
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-
-# The Nsisong Medical Device Monitoring and Alert System
-
-## Overview
-
-The Nsisong Medical Device Monitoring and Alert System is designed to monitor the status of medical devices (e.g., heart monitors, infusion pumps) and alert healthcare providers of any malfunctions. It includes real-time data collection, analysis, and fault detection, with a user-friendly web interface for monitoring device status.
 
 ## Features
 
