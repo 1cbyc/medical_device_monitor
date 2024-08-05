@@ -12,7 +12,7 @@ def dashboard():
     if os.path.exists('data/simulated_data.csv'):
         df = pd.read_csv('data/simulated_data.csv')
     else:
-        df = pd.DataFrame(columns=["device_id", "timestamp", "status"])
+        df = pd.DataFrame(columns=["device_id", "timestamp", "status", "heart_rate", "infusion_rate"])
 
 @app.route('/')
 def dashboard():
