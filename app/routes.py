@@ -12,6 +12,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def dashboard():
+    df = pd.read_csv('data/real_time_data.csv')
+    fig = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Heart Rate Over Time')
+    graph_html = fig.to_html(full_html=False)
+    return render_template('dashboard.html', graph_html=graph_html)
+@app.route('/')
+def dashboard():
     # will load the data
     if os.path.exists('data/simulated_data.csv'):
         df = pd.read_csv('data/simulated_data.csv')
