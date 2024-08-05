@@ -98,7 +98,18 @@ medical_device_monitor/
 - **`run.py`**: Entry point for running the Flask application.
 
 
-Contributing
+## Code Structure
+
+
+- `app/`: Contains the Flask application and templates.
+- `data/`: Data files and simulated data.
+- `static/`: Static files like CSS and JS.
+- `tests/`: Unit and integration tests.
+- `data/`: 
+- `alert_system/`: 
+
+
+## Contributing
 
 - Fork the repository.
 - Create a feature branch.
