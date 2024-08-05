@@ -41,3 +41,58 @@ The Nsisong Medical Device Monitoring and Alert System is designed to monitor th
 
 ## Project Structure
 
+medical_device_monitor/
+├── app/
+│ ├── init.py
+│ ├── routes.py
+│ └── templates/
+│ ├── base.html
+│ ├── dashboard.html
+│ ├── historical.html
+│ └── status.html
+├── data/
+│ ├── devices.csv
+│ └── simulated_data.csv
+├── static/
+│ ├── css/
+│ ├── js/
+│ └── images/
+├── tests/
+│ ├── test_data_processing.py
+│ ├── test_fault_detection.py
+│ └── test_web_interface.py
+├── venv/
+├── requirements.txt
+└── run.py
+
+
+### **Directory Details**
+
+- **`app/`**: Contains the core Flask application code and templates.
+  - **`__init__.py`**: Initializes the Flask application and sets up configurations.
+  - **`routes.py`**: Defines the routes and views for the web application.
+  - **`templates/`**: Contains HTML templates used for rendering the web pages.
+    - **`base.html`**: Base template for other HTML files.
+    - **`dashboard.html`**: Template for the dashboard view.
+    - **`historical.html`**: Template for viewing historical data.
+    - **`status.html`**: Template for displaying device status.
+
+- **`data/`**: Stores data files used by the application.
+  - **`devices.csv`**: Contains information about medical devices.
+  - **`simulated_data.csv`**: Contains simulated data for testing purposes.
+
+- **`static/`**: Holds static files such as CSS, JavaScript, and images.
+  - **`css/`**: Directory for CSS stylesheets.
+  - **`js/`**: Directory for JavaScript files.
+  - **`images/`**: Directory for image files.
+
+- **`tests/`**: Contains unit and integration tests for the application.
+  - **`test_data_processing.py`**: Tests for data processing functions.
+  - **`test_fault_detection.py`**: Tests for fault detection algorithms.
+  - **`test_web_interface.py`**: Tests for web interface functionality.
+
+- **`venv/`**: Virtual environment directory (do not modify or delete this directory).
+
+- **`requirements.txt`**: Lists the Python packages required for the project.
+
+- **`run.py`**: Entry point for running the Flask application.
