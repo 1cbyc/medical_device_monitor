@@ -96,3 +96,14 @@ medical_device_monitor/
 - **`requirements.txt`**: Lists the Python packages required for the project.
 
 - **`run.py`**: Entry point for running the Flask application.
+
+
+Contributing
+
+- Fork the repository.
+- Create a feature branch.
+- Submit a pull request with a detailed description of changes.
+
+
+This `README.md` should give users and developers clear guidance on setting up, using, and contributing to the Medical Device Monitoring and Alert System. If you need further adjustments, just let me know!
+
