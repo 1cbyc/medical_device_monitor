@@ -1,8 +1,7 @@
-import os
+# import os
 import unittest
 import pandas as pd
 from app.fault_detection import detect_faults
-
 
 class TestFaultDetection(unittest.TestCase):
 
