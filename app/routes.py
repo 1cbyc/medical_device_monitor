@@ -8,14 +8,15 @@ import os
 # from app import create_app
 
 # app = create_app()
-app = Flask(__name__)
+# app = Flask(__name__)
+#
+# @app.route('/')
+# def dashboard():
+#     df = pd.read_csv('data/real_time_data.csv')
+#     fig = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Heart Rate Over Time')
+#     graph_html = fig.to_html(full_html=False)
+#     return render_template('dashboard-v1.html', graph_html=graph_html)
 
-@app.route('/')
-def dashboard():
-    df = pd.read_csv('data/real_time_data.csv')
-    fig = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Heart Rate Over Time')
-    graph_html = fig.to_html(full_html=False)
-    return render_template('dashboard-v1.html', graph_html=graph_html)
 @app.route('/')
 def dashboard():
     # will load the data
@@ -33,6 +34,12 @@ def dashboard():
 
     return render_template('dashboard-v1.html', devices=df.to_dict('records'), fault_devices=fault_devices)
 
+@app.route('/historical')
+def historical():
+    df = pd.read_csv('data/real_time_data.csv')
+    fig = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Historical Heart Rate Data')
+    graph_html = fig.to_html(full_html=False)
+    return render_template('historical.html', graph_html=graph_html)
 # @app.route('/')
 # def dashboard():
 #     df = pd.read_csv('data/simulated_data.csv')
