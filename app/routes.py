@@ -32,7 +32,8 @@ def alerts():
 def status():
     df pd.read_csv('data/real_time_data.csv')
     fig = px.scatter(df, x='timestamp', y='status', color='device_id', title='Device Status Over time')
-    
+
+
 
 
 @app.route('/') #will remove all app.routes and use bp instead
