@@ -1,15 +1,3 @@
-import os
-import psycopg2
-from flask import Blueprint, render_template
-from .data_analysis import detect_faults, load_data # will import fault detection
-from .alert_system import send_email_alert
-import pandas as pd
-import plotly.express as px
-from dotenv import  load_dotenv
-
-load_data() # to load the env var for db from .env
-
-bp = Blueprint('main', __name__)
 def load_data():
     # Temporarily return an empty DataFrame for testing purposes
     return pd.DataFrame()
