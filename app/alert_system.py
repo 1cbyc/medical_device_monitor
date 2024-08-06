@@ -1,3 +1,4 @@
+import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -6,6 +7,7 @@ def send_email_alert(device_id):
     sender_email = "your_email@example.com"
     receiver_email = "provider_email@example.com"
     password = "your_email_password"
+    
 
     message = MIMEMultipart("alternative")
     message["Subject"] = f"Alert: Fault detected in {device_id}"
