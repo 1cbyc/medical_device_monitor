@@ -4,10 +4,14 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 def send_email_alert(device_id):
-    sender_email = "your_email@example.com"
-    receiver_email = "provider_email@example.com"
-    password = "your_email_password"
-    
+    # sender_email = "your_email@example.com"
+    # receiver_email = "provider_email@example.com"
+    # password = "your_email_password"
+    sender_email = os.getenv('SENDER_EMAIL')
+    receiver_email = os.getenv('RECEIVER_EMAIL')
+    password = os.getenv('EMAIL_PASSWORD')
+    smtp_server = os.getenv('SMTP_SERVER')
+    smtp_port = os.getenv('SMTP_PORT')
 
     message = MIMEMultipart("alternative")
     message["Subject"] = f"Alert: Fault detected in {device_id}"
