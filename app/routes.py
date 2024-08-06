@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from .data_analysis import detect_faults # will import fault detection
+from .data_analysis import detect_faults, load_data # will import fault detection
 from .alert_system import send_email_alert
 import pandas as pd
 import plotly.express as px
