@@ -13,7 +13,7 @@ def dashboard():
     fault_devices = detect_faults(df)
     for device_id in fault_devices:
         send_email_alert(device_id)
-    return  render_template('dashboard.html', devices=df.to_dict('records') fault_devices=fault_devices)
+    return  render_template('dashboard.html', devices=df.to_dict('records'), fault_devices=fault_devices)
 
 @bp.route('/historical')
 def historical():
