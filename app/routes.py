@@ -1,12 +1,9 @@
-# from flask import render_template, redirect, url_for
 from flask import Blueprint, render_template
 from .data_analysis import detect_faults # will import fault detection
-import pandas as pd
 from .alert_system import send_email_alert
+import pandas as pd
 import plotly.express as px
 import os
-import psycopg2
-# from app import create_app
 
 bp = Blueprint('main', __name__)
 
@@ -14,19 +11,13 @@ bp = Blueprint('main', __name__)
 def dashboard():
     df = load_data()
     fault_devices = detect_faults(df)
-    return  render_template('dashboard.html', faults=fault_devices)
+    for device_id in fault_devices:
+        send_email_alert(device_id)
+    return  render_template('dashboard.html', devices=df.to_dict('records') fault_devices=fault_devices)
 
-# app = create_app()
-# app = Flask(__name__)
-#
-# @app.route('/')
-# def dashboard():
-#     df = pd.read_csv('data/real_time_data.csv')
-#     fig = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Heart Rate Over Time')
-#     graph_html = fig.to_html(full_html=False)
-#     return render_template('dashboard-v1.html', graph_html=graph_html)
-
-@app.route('/')
+@bp.route('/historical')
+def historical():
+@app.route('/') #will remove all app.routes and use bp instead
 def dashboard():
     # will load the data
     if os.path.exists('data/simulated_data.csv'):
