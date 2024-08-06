@@ -10,16 +10,9 @@ from dotenv import  load_dotenv
 load_data() # to load the env var for db from .env
 
 bp = Blueprint('main', __name__)
-
-def connect_db():
-    conn = psycopg2.connect(
-        dbname=os.getenv('DB_NAME'),
-        user=os.getenv('DB_USER'),
-        password=os.getenv('DB_PASSWORD'),
-        host=os.getenv('DB_HOST'),
-        port=os.getenv('DB_HOST')
-    )
-    return conn
+def load_data():
+    # Temporarily return an empty DataFrame for testing purposes
+    return pd.DataFrame()
 
 @bp.route('/')
 def dashboard():
@@ -27,14 +20,19 @@ def dashboard():
     fault_devices = detect_faults(df)
     for device_id in fault_devices:
         send_email_alert(device_id)
-    return  render_template('dashboard.html', devices=df.to_dict('records'), fault_devices=fault_devices)
+    return render_template('dashboard.html', devices=df.to_dict('records'), fault_devices=fault_devices)
 
 @bp.route('/historical')
 def historical():
-    df = pd.read_csv('data/real_time_data.csv')
+    # Temporarily use a sample DataFrame
+    df = pd.DataFrame({
+        'timestamp': ['2024-01-01', '2024-01-02'],
+        'heart_rate': [70, 75],
+        'device_id': [1, 1]
+    })
     fig = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Historical Heart Rate Data')
-    graph_html = fig.to_html(full_html=false)
-    return render_template('historocal.html', graph_html=graph_html)
+    graph_html = fig.to_html(full_html=False)
+    return render_template('historical.html', graph_html=graph_html)
 
 @bp.route('/alerts')
 def alerts():
@@ -44,15 +42,12 @@ def alerts():
 
 @bp.route('/status')
 def status():
-    df = pd.read_csv('data/real_time_data.csv')
+    # Temporarily use a sample DataFrame
+    df = pd.DataFrame({
+        'timestamp': ['2024-01-01', '2024-01-02'],
+        'status': ['active', 'inactive'],
+        'device_id': [1, 1]
+    })
     fig = px.scatter(df, x='timestamp', y='status', color='device_id', title='Device Status Over time')
-    graph_html = fig.to_html(full_html=false)
+    graph_html = fig.to_html(full_html=False)
     return render_template('status.html', graph_html=graph_html)
-
-def load_data():
-    # let's assume this function loads data from the db or the csv
-    conn = connect_db()
-    query = "SELECT * FROM your_table"
-    df = pd.read_sql(query, conn)
-    conn.close()
-    return df
