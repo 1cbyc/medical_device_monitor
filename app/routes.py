@@ -17,6 +17,9 @@ def dashboard():
 
 @bp.route('/historical')
 def historical():
+    df = pd.read_csv('data/real_time_data.csv')
+    flg = px.line(df, x='')
+
 @app.route('/') #will remove all app.routes and use bp instead
 def dashboard():
     # will load the data
