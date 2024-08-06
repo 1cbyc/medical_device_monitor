@@ -30,7 +30,7 @@ def alerts():
 
 @bp.route('/status')
 def status():
-    df pd.read_csv('data/real_time_data.csv')
+    df = pd.read_csv('data/real_time_data.csv')
     fig = px.scatter(df, x='timestamp', y='status', color='device_id', title='Device Status Over time')
     graph_html = fig.to_html(full_html=false)
     return render_template('status.html', graph_html=graph_html)
