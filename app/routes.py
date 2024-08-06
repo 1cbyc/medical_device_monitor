@@ -22,6 +22,19 @@ def historical():
     graph_html = fig.to_html(full_html=false)
     return render_template('historocal.html', graph_html=graph_html)
 
+@bp.route('/alerts')
+def alerts():
+    df = load_data()
+    fault_devices = detect_faults(df)
+    return render_template('alerts.html', fault_devices=fault_devices)
+
+@bp.route('/status')
+def status():
+    df pd.read_csv('data/real_time_data.csv')
+    fig = px.scatter(df, x='timestamp', y='status', color='device_id', title='Device Status Over time')
+    
+
+
 @app.route('/') #will remove all app.routes and use bp instead
 def dashboard():
     # will load the data
