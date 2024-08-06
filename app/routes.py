@@ -18,7 +18,9 @@ def dashboard():
 @bp.route('/historical')
 def historical():
     df = pd.read_csv('data/real_time_data.csv')
-    flg = px.line(df, x='timestamp', y='heart_rate', color='de')
+    flg = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Historical Heart Rate Data')
+    graph_html = fig.to_html(full_html=false)
+    return render_template('historocal.html', graph_html=graph_html)
 
 @app.route('/') #will remove all app.routes and use bp instead
 def dashboard():
