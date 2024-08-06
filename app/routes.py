@@ -18,7 +18,7 @@ def dashboard():
 @bp.route('/historical')
 def historical():
     df = pd.read_csv('data/real_time_data.csv')
-    flg = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Historical Heart Rate Data')
+    fig = px.line(df, x='timestamp', y='heart_rate', color='device_id', title='Historical Heart Rate Data')
     graph_html = fig.to_html(full_html=false)
     return render_template('historocal.html', graph_html=graph_html)
 
@@ -35,12 +35,12 @@ def status():
     graph_html = fig.to_html(full_html=false)
     return render_template('status.html', graph_html=graph_html)
 
-def connect_db():
-    import psycopg2
-    conn: None = psycopg2.connect(
-        dbname='your_dbname',
-        user='your_user',
-        password='your_password',
-        host='your_host'
-    )
-    return conn
+# def connect_db():
+#     import psycopg2
+#     conn: None = psycopg2.connect(
+#         dbname='your_dbname',
+#         user='your_user',
+#         password='your_password',
+#         host='your_host'
+#     )
+#     return conn
