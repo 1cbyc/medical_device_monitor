@@ -1,5 +1,5 @@
 # from flask import render_template, redirect, url_for
-from flask import render_template
+from flask import Blueprint, render_template
 import pandas as pd
 from .data_analysis import detect_faults # will import fault detection
 from .alert_system import send_email_alert
@@ -7,6 +7,8 @@ import plotly.express as px
 import os
 import psycopg2
 # from app import create_app
+
+bp = Blueprint('main', __name__)
 
 # app = create_app()
 # app = Flask(__name__)
@@ -34,6 +36,7 @@ def dashboard():
         send_email_alert(device_id)
 
     return render_template('dashboard-v1.html', devices=df.to_dict('records'), fault_devices=fault_devices)
+    # return render_template('dashboard.html')
 
 @app.route('/historical')
 def historical():
