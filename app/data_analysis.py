@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 def load_data():
     if os.path.exists('data/simulated_data.csv'):
