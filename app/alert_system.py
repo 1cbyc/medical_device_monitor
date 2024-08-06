@@ -21,5 +21,7 @@ def send_email_alert(device_id):
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message.as_string())
 
+    print(f"Alert sent for data {device_id}")
+
 if __name__ == "__main__":
     send_email_alert("device_1")
