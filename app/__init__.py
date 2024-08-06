@@ -1,4 +1,8 @@
 from flask import Flask
+from dotenv import load_dotenv
+import os
+
+load_dotenv() # will load the env var from .env file
 
 def create_app():
     app = Flask(__name__)
