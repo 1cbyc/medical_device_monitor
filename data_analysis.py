@@ -1,5 +1,6 @@
 import pandas as pd
 
+def 
 def load_data():
     df = pd.read_csv('data/simulated_data.csv')
     return df
