@@ -34,4 +34,8 @@ DB_HOST=localhost
 DB_PORT=5432
 ```
 
+**4. Create Tables and Insert Sample Data**
+
+Create the necessary tables and insert sample data. You can do this by connecting to the database using a tool like pgAdmin or through the command line.
+
 
