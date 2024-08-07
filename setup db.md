@@ -9,4 +9,9 @@ Download and install PostgreSQL from the [official website](https://www.postgres
 
 **2. Create a Database and User**
 
-Open the PostgreSQL command line interface (psql) and create a new database and user.
+* Open the PostgreSQL command line interface (psql) and create a new database and user.
+
+```bash
+psql -U postgres
+```
+* 
