@@ -162,3 +162,8 @@ cython_debug/
 .idea/
 
 commit.py
+
+config.py
+
+# do not ignore migrations folder cause of the db changes i want to track
+!migrations/

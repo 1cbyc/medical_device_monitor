@@ -54,3 +54,35 @@ INSERT INTO your_table (timestamp, heart_rate, device_id, status) VALUES
 ```
 
 
+
+# For testing Purposes
+
+I decided to use SQLAlchemy. Which meant I'd install in the code and run:
+
+**1. You should install SQLAlchemy and Flask-SQLAlchemy**
+
+If you have downloaded the SQLAlchemy WHL file, you can install it using pip:
+
+```bash
+pip install c:/1cbyc/sqlalchemy.whl
+```
+Also, install Flask-SQLAlchemy:
+
+```bash
+pip install Flask-SQLAlchemy
+```
+
+**2. Configure SQLAlchemy in Your Flask Application**
+
+start by updating your `.env` file to include the database URL for SQLAlchemy:
+
+```plaintext
+SQLALCHEMY_DATABASE_URI=postgresql://medical_user:your_password@localhost:5432/medical_device_db
+SQLALCHEMY_TRACK_MODIFICATIONS=False
+```
+
+3. I updated the init script to introduce SQLALchemy
+4. I also created a new models.py file in my app dir to define the db models
+5. Ofcourse, i had to adjust the routes.py file to use sqlalchemy too
+
+ps: i used pgadmin cause i was already tired of writing commands o
