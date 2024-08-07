@@ -4,6 +4,8 @@
 #
 # if __name__ == "__main__":
 #     app.run(debug=True)
+
+# before migration happened
 # from flask_migrate import MigrateCommand
 # from flask_script import Manager
 #
@@ -19,7 +21,7 @@
 #     app.run(debug=True)
 # after fixing migration then we have this below:
 
-
+# after migration was completed
 from app import create_app, db
 from flask_migrate import Migrate
 from flask.cli import AppGroup
