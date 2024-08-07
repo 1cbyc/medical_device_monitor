@@ -14,4 +14,12 @@ Download and install PostgreSQL from the [official website](https://www.postgres
 ```bash
 psql -U postgres
 ```
-* 
+* Create a new database and user:
+
+```sql
+CREATE DATABASE medical_device_db;
+CREATE USER medical_user WITH PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE medical_device_db TO medical_user;
+```
+
+3. 
