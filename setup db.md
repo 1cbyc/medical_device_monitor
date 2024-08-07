@@ -25,3 +25,13 @@ GRANT ALL PRIVILEGES ON DATABASE medical_device_db TO medical_user;
 **3. Update the .env File:**
 
 you should your .env file with the correct database connection details:
+
+```plaintext
+DB_NAME=medical_device_db
+DB_USER=medical_user
+DB_PASSWORD=your_password
+DB_HOST=localhost
+DB_PORT=5432
+```
+
+
