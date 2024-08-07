@@ -22,4 +22,6 @@ CREATE USER medical_user WITH PASSWORD 'your_password';
 GRANT ALL PRIVILEGES ON DATABASE medical_device_db TO medical_user;
 ```
 
-3. 
+**3. Update the .env File:**
+
+you should your .env file with the correct database connection details:
