@@ -20,3 +20,9 @@ SMTP_PASSWORD=your_gmail_password
 * Create an API key.
 * Update your .env file with the following details:
 
+```plaintext
+SMTP_SERVER=smtp.sendgrid.net
+SMTP_PORT=587
+SMTP_USERNAME=apikey
+SMTP_PASSWORD=your_sendgrid_api_key
+```
