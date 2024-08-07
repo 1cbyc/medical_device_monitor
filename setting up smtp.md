@@ -8,3 +8,10 @@ You can use an SMTP server like Gmail, SendGrid, or any other email service prov
 * Enable "Less secure app access" for your Gmail account here.
 * Update your .env file with the following details:
 
+```plaintext
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USERNAME=your_gmail_username
+SMTP_PASSWORD=your_gmail_password
+```
+
