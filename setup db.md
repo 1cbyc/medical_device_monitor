@@ -4,9 +4,9 @@ We'd use PostgreSQL, so let me show you how  to set up the database:
 
 **1. Install PostgreSQL**
 
-    Download and install PostgreSQL from the official website.
-    Follow the installation instructions specific to your operating system.
+Download and install PostgreSQL from the [official website](https://www.postgresql.org/download/). Follow the installation instructions specific to your operating system.
+
 
 **2. Create a Database and User**
 
-    Open the PostgreSQL command line interface (psql) and create a new database and user.
+Open the PostgreSQL command line interface (psql) and create a new database and user.
