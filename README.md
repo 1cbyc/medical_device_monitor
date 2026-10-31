@@ -1,3 +1,5 @@
+> **Licensing update (31 October 2026):** The current policy requires prior written permission for reuse and a separate agreement for AI training. See [LICENSE](LICENSE). Earlier grants remain valid for previously licensed material; [LICENSE.previous](LICENSE.previous) preserves those terms. Any older license descriptions below describe the previous policy. Contact [ei@nsisong.com](mailto:ei@nsisong.com).
+
 # The Nsisong Medical Device Monitoring and Alert System
 
 ## Overview
@@ -102,4 +104,3 @@ medical_device_monitor/
 - Submit a pull request with a detailed description of changes.
 
 This `README.md` should give users and developers clear guidance on setting up, using, and contributing to the Medical Device Monitoring and Alert System. If you need further adjustments, just let me know!
-
